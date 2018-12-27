@@ -7,7 +7,7 @@ scoop bucket add extras
 scoop bucket add java
 
 # utils
-scoop install 7zip curl sudo git openssh coreutils ripgrep sharpkeys
+scoop install 7zip curl sudo git openssh coreutils ripgrep sharpkeys fd
 
 # fonts
 scoop install hack-font
