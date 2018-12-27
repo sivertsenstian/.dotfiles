@@ -7,7 +7,10 @@ scoop bucket add extras
 scoop bucket add java
 
 # utils
-scoop install 7zip curl sudo git openssh coreutils ripgrep
+scoop install 7zip curl sudo git openssh coreutils ripgrep sharpkeys
+
+# fonts
+scoop install hack-font
 
 # programming languages
 scoop install nodejs openjdk
@@ -18,3 +21,6 @@ concfg import onedark
 
 # IDE
 scoop install emacs
+
+# Apps
+scoop install firefox-developer
