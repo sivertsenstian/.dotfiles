@@ -30,3 +30,6 @@ scoop install emacs vim
 
 # Apps
 scoop install firefox-developer
+
+# Ubuntu subsystem
+scoop install vcxsrv
