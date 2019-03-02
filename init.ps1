@@ -19,11 +19,11 @@ scoop install hack-font
 scoop install nodejs openjdk
 
 # console theme
-scoop install concfg pshazz
+# scoop install concfg pshazz
 # color theme
-concfg import onedark
+# concfg import onedark
 # pshazz theme
-pshazz use zor
+# pshazz use zor
 
 # IDE
 scoop install emacs vim
