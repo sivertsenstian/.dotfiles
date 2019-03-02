@@ -43,15 +43,15 @@ alias guiemacs='DISPLAY=:0 emacs &'
 # ALSO SET
 # IMPORTANT: VcXsrv with compatibility mode > override high DPI > Application
 # FOR BOTH LAUNC AND VCXSRV
-export GDK_SCALE=0.5
-export GDK_DPI_SCALE=2
+# export GDK_SCALE=0.5
+# export GDK_DPI_SCALE=2
 
 # SET KEYBOARD LAYOUT TO US using setxkbmap
 export DISPLAY=:0
 setxkbmap us
 
 # SSH for ubuntu subsystem
-ssh-agent /bin/bash
+# ssh-agent /bin/bash
 # Add ssh key using
 # ssh-add /path/to/.ssh/id_rsa, e.g => /mnt/c/Users/stian/.ssh/id_rsa
 # Most likely you need to move the .ssh content to ~/
