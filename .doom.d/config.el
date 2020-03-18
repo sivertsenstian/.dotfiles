@@ -14,6 +14,11 @@
  :en "M-k"   #'evil-window-up
  :en "M-l"   #'evil-window-right
  (:leader
+   :nv "wS" #'ace-swap-window
+   :nv "w_" #'ace-delete-other-windows
+   :nv "fS" #'evil-write-all
+   :nv "fw" #'write-file
+   :nv "sr" #'ivy-resume
    (:desc "jump" :prefix "j"
      :desc "to char"               :nv "j" #'avy-goto-char
      :desc "to word"               :nv "w" #'avy-goto-word-1
@@ -26,7 +31,23 @@
 (after! tide
  (map! :localleader
        :map tide-mode-map
-       "rrf"   #'tide-fix))
+       "rrf"   #'tide-fix
+       "mj"    #'+lookup/definition))
+
+(after! emmet-mode
+  (setq emmet-expand-jsx-className? t))
+
+(after! web-mode
+  (setq web-mode-enable-html-entities-fontification t
+        web-mode-auto-close-style 1))
+
+(use-package evil-matchit
+  :init
+  (map! [remap evil-jump-item] #'evilmi-jump-items
+        :textobj "%" #'evilmi-text-object #'evilmi-text-object)
+  :config
+  (global-evil-matchit-mode 1))
+
 
 ;; These are used for a number of things, particularly for GPG configuration,
 ;; some email clients, file templates and snippets.
@@ -42,7 +63,7 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "monospace" :size 24))
+(setq doom-font (font-spec :family "monospace" :size 14))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
