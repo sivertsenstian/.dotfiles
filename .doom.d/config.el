@@ -13,6 +13,8 @@
  :en "M-j"   #'evil-window-down
  :en "M-k"   #'evil-window-up
  :en "M-l"   #'evil-window-right
+ :en "]e"    #'flycheck-next-error
+ :en "[e"    #'flycheck-previous-error
  (:leader
    :nv "wS" #'ace-swap-window
    :nv "w_" #'ace-delete-other-windows
@@ -48,7 +50,6 @@
   :config
   (global-evil-matchit-mode 1))
 
-
 ;; These are used for a number of things, particularly for GPG configuration,
 ;; some email clients, file templates and snippets.
 (setq user-full-name "Stian Sivertsen"
@@ -63,7 +64,7 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "monospace" :size 14))
+(setq doom-font (font-spec :family "Hack" :size 14))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
